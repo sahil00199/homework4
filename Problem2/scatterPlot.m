@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 mu = [1;2];%initializing the value of the mean
+=======
+    mu = [1;2];
+>>>>>>> a4ae3ad7dfc5cf4f950594fc5b3e4121fc24cddb
 m=1;
 C = [1.6250, -1.9486 ; -1.9486 , 3.8750];%initializing the covariance matrix
 [Q, lambda] = eig(C);%calculating the eigenvalues and corresponding eigenvectors

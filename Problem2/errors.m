@@ -1,3 +1,4 @@
+
 rng(0);
 mu = [1;2];%initializing the value of the mean
 m=100;
