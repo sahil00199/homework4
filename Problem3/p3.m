@@ -56,8 +56,8 @@ for i=1:10
     %update the corresponding vectors
     meansPos(i, :) = means(i, :) + sqrt(eigenvalues(i, 1))*eigenvectors(i,:);
 end, 
-plot(eigenvalues(10,:)) %plot the eigenvalues for a particular digit
-title('Eigenvalues for the digit 9') %title of the plot
+plot(eigenvalues(6,:)) %plot the eigenvalues for a particular digit
+title('Eigenvalues for the digit 5') %title of the plot
 
  figure;
  title('digit 5')
