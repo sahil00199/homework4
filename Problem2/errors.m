@@ -1,5 +1,6 @@
+rng(0);
 mu = [1;2];
-m=1;
+m=100;
 C = [1.6250, -1.9486 ; -1.9486 , 3.8750];
 squareC = C.^2;
 froC = sum(sum(squareC));
@@ -11,7 +12,6 @@ covErrors = zeros(m, 5);
 numbers = [10, 100, 1000, 10000, 100000];
 for i = 1:5
     for j = 1:m
-        rng(0);
         X = randn(2, numbers(i));
         Y = A*X;
         Y(1,:) = Y(1,:) + mu(1);
@@ -31,3 +31,4 @@ for i = 1:5
         covErrors(j, i) = sqrt(covErrors(j, i));
     end
 end
+save('p2data')
