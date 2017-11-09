@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                          end of reading
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-[images, labels] = p33('train-images.idx3-ubyte','train-labels.idx1-ubyte');
+[images, labels] = generateData('train-images.idx3-ubyte','train-labels.idx1-ubyte');
 correctData = double(reshape(images(:,:,1:60000),[],60000));
 numbers = zeros(1, 10);
 length = numCols*numRows;

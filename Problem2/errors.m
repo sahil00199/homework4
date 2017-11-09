@@ -31,5 +31,3 @@ for i = 1:5
         covErrors(j, i) = sqrt(covErrors(j, i));
     end
 end
-display(meanErrors)
-display(covErrors)

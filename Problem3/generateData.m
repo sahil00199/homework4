@@ -1,4 +1,4 @@
-function [images, labels] = p33(path_to_digits, path_to_labels)
+function [images, labels] = generateData(path_to_digits, path_to_labels)
 
 % Open files
 fid1 = fopen(path_to_digits, 'r');
