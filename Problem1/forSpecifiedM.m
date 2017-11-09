@@ -1,4 +1,4 @@
-m = 99414; %the value of m that we computed
+m = 103599; %the value of m that we computed
 rng(0);
 X = 2*rand(2, m) - 1; %generate two random variables in [-1, 1]
 Y = single(X); %typecast to single
