@@ -11,17 +11,21 @@ for i = 1:5
     Y = A*X;
     Y(1,:) = Y(1,:) + mu(1);
     Y(2,:) = Y(2,:) + mu(2);
-    scaledY = zeros(2,numbers(i));
     MLmean = [mean(Y(1,:)); mean(Y(2,:))];
+    scaledY=zeros(2,numbers(i));
     scaledY(1,:) = Y(1,:) - MLmean(1);
     scaledY(2,:) = Y(2,:) - MLmean(2);
-    currentCov = scaledY*scaledY';
+    currentCov = (scaledY*scaledY')./numbers(i);
     pcaVec = zeros(1,2);
     [eigenVec, eigenValues] = eig(currentCov);
     if eigenValues(1,1)>eigenValues(2,2)
-        pcaVec = eigenVec(:,1);
+        pcaVec = eigenVec(:,1)*eigenValues(1,1);
     else
-        pcaVec = eigenVec(:,2);
+        pcaVec = eigenVec(:,2)*eigenValues(2,2);
     end
-    pcaVec
+    data2 = MLmean + pcaVec;
+    scatter(Y(1,:),Y(2,:));
+    hold on;
+    plot([MLmean(1),data2(1)],[MLmean(2),data2(2)])
+    
 end
