@@ -39,7 +39,11 @@ for i=1:10
     for j = 1:totalImages
         if labels(j) == i - 1
             data = double(reshape(correctData(:,j),1,length)) - means(i,:);
+<<<<<<< HEAD
+            covar(y,:) = data;
+=======
             covar(y,:) = data; %add current vector to the data
+>>>>>>> 4c7db1a7e3d87dc1547e3ba9adf4fefd8606caa5
             y = y + 1;
         end
     end
@@ -62,6 +66,13 @@ title('Eigenvalues for the digit 9') %title of the plot
  figure;
  title('digit 5')
  subplot(1,3,1)
+<<<<<<< HEAD
+ imshow(reshape(means(8,:)./255,28,28));
+ subplot(1,3,2)
+ imshow(reshape(meansNeg(8,:)./255,28,28));
+ subplot(1,3,3)
+ imshow(reshape(meansPos(8,:)./255,28,28));
+=======
  imshow(reshape(means(6,:)./255,28,28)); %show the image corresponding to the 
  %mean vector
  subplot(1,3,2)
@@ -70,6 +81,7 @@ title('Eigenvalues for the digit 9') %title of the plot
  subplot(1,3,3)
  imshow(reshape(meansPos(6,:)./255,28,28)); % show the image corresponding the
  %mean plus sqrt(lambda)v1 vector
+>>>>>>> 4c7db1a7e3d87dc1547e3ba9adf4fefd8606caa5
 % for i=1:10
 %     subplot(1,10,i)
 %     imshow(reshape(means(i,:),28,28)./255);

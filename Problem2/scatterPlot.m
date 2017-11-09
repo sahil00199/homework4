@@ -27,5 +27,5 @@ for i = 1:5
     scatter(Y(1,:),Y(2,:));
     hold on;
     plot([MLmean(1),data2(1)],[MLmean(2),data2(2)])
-    
+    pcaVec
 end
